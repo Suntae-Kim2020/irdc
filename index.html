@@ -218,6 +218,36 @@
   .meta-hero p{color:rgba(255,255,255,.9);font-size:16.5px;line-height:1.85;max-width:64ch;margin-top:20px;position:relative;z-index:1}
   .meta-hero p+p{margin-top:16px}
 
+  /* ---------- GREETING ---------- */
+  .greet-grid{display:grid;grid-template-columns:310px 1fr;gap:clamp(34px,5vw,68px);align-items:start;margin-top:46px}
+  .portrait{position:sticky;top:98px}
+  .portrait figure{margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:var(--shadow);background:var(--card)}
+  .portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+  .portrait figcaption{padding:22px 22px 24px}
+  .portrait .nm{font-size:22px;font-weight:800;letter-spacing:-.02em}
+  .portrait .ro{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--teal);
+    margin-top:8px;text-transform:uppercase}
+  .portrait .aff{font-size:13px;color:var(--ink-faint);margin-top:14px;line-height:1.7;
+    padding-top:14px;border-top:1px solid var(--line)}
+  .msg .big{font-family:var(--serif);font-size:clamp(21px,2.7vw,28px);font-style:italic;color:var(--ink);
+    line-height:1.5;margin-bottom:30px;text-wrap:balance}
+  .msg .big::before{content:"“";color:var(--amber);font-weight:700;margin-right:2px}
+  .msg .big::after{content:"”";color:var(--amber);font-weight:700}
+  .msg p{font-size:16.5px;color:var(--ink-soft);line-height:1.9}
+  .msg p+p{margin-top:18px}
+  .msg strong{color:var(--ink);font-weight:700}
+  .msg .fair{display:inline-flex;gap:6px;flex-wrap:wrap;margin:4px 2px}
+  .sign{margin-top:38px;padding-top:26px;border-top:1px solid var(--line)}
+  .sign .s1{font-size:14px;color:var(--ink-faint)}
+  .sign .s2{font-size:20px;font-weight:800;margin-top:8px;letter-spacing:-.01em}
+  .sign .s2 span{font-weight:500;color:var(--ink-soft);font-size:14.5px;margin-right:10px;
+    font-family:var(--mono);letter-spacing:.02em}
+  @media (max-width:860px){
+    .greet-grid{grid-template-columns:1fr}
+    .portrait{position:static;max-width:340px}
+  }
+
   /* ---------- VISIT ---------- */
   .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px);margin-top:44px;align-items:start}
   .addr-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px}
@@ -296,6 +326,7 @@
     </button>
     <nav class="menu" id="menu">
       <button data-go="home" class="on">홈</button>
+      <button data-go="greeting">인사말</button>
       <button data-go="work">사업실적</button>
       <button data-go="research">주요연구분야</button>
       <button data-go="visit">오시는 길</button>
@@ -368,6 +399,40 @@
           <article class="sig"><span class="glyph">02</span><div class="idx">CERTIFICATION</div><h3>리포지토리 국제인증 지원</h3><p>연구데이터 저장소가 신뢰받을 수 있도록 CoreTrustSeal(CTS) 인증 요건을 분석하고 획득 전략을 수립합니다. 국내 기관의 해외 인증을 실제로 이끌었습니다.</p></article>
           <article class="sig"><span class="glyph">03</span><div class="idx">METADATA · STANDARD</div><h3>메타데이터 · 표준화</h3><p>목재·생태·해양·농업 등 도메인별 메타데이터 스키마와 maDMP를 설계하고 TTA 표준 제정, ISNI 기반 식별체계 구축을 지원합니다.</p></article>
           <article class="sig"><span class="glyph">04</span><div class="idx">META SCIENCE</div><h3>메타사이언스 연구</h3><p>과학의 생산 방식 자체를 분석 대상으로 삼아 한·일 공동연구 분석, 중국 휴머노이드 로봇 R&amp;D 동향 등 연구 생태계의 지형을 데이터로 그려냅니다.</p></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GREETING ================= -->
+  <section class="page" id="greeting">
+    <div class="block">
+      <div class="wrap">
+        <div class="eyebrow">인사말 · Director's Message</div>
+        <h2 class="section-h">데이터가 지식이 되고,<br>지식이 모두의 것이 되도록</h2>
+        <div class="greet-grid">
+          <div class="portrait">
+            <figure>
+              <img src="director.jpg" alt="연구소장 김선태" width="560" height="700">
+              <figcaption>
+                <div class="nm">김선태</div>
+                <div class="ro">Director · 연구소장</div>
+                <div class="aff">전북대학교 부설<br>연구데이터융복합연구소</div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="msg">
+            <p class="big">연구의 진정한 가치는 그 결과가 공유되고, 다시 쓰이며, 더 큰 발견으로 이어질 때 비로소 완성됩니다.</p>
+            <p>전북대학교 부설 <strong>연구데이터융복합연구소</strong> 홈페이지를 찾아 주신 여러분을 진심으로 환영합니다. 우리는 지금 데이터가 곧 지식이자 자산이 되는 시대, 그리고 그 데이터를 학습하여 인공지능이 스스로 통찰을 만들어 내는 <strong>AI 시대</strong>를 살아가고 있습니다. 오늘날 모든 과학적 발견의 출발점이자 인공지능의 연료가 되는 것은, 다름 아닌 잘 정리된 <strong>연구데이터</strong>입니다.</p>
+            <p>그러나 아무리 귀중한 데이터라도 체계적으로 <strong>수집·저장·관리·보존</strong>되지 않으면 이내 흩어지고 사라집니다. 연구데이터가 한 번의 실험으로 소멸하지 않고 다음 세대의 연구로 이어지려면, 데이터를 안전하게 담아 두고 필요할 때 다시 꺼내어 <strong>재사용</strong>할 수 있게 하는 <strong>데이터 리포지터리(Data Repository)</strong>가 반드시 필요합니다. 리포지터리는 단순한 저장 공간이 아니라, 데이터의 신뢰성과 재현성, 그리고 장기적 활용 가능성을 지켜 내는 학술 인프라의 심장입니다.</p>
+            <p>나아가 이러한 리포지터리가 세계적으로 신뢰받기 위해서는 <strong>CoreTrustSeal</strong>과 같은 국제인증이 뒷받침되어야 합니다. 국제인증은 데이터가 <strong>찾을 수 있고(Findable)·접근 가능하며(Accessible)·상호운용되고(Interoperable)·재사용 가능한(Reusable)</strong> 이른바 <strong>FAIR 원칙</strong>에 따라 관리되고 있음을 국제사회에 보증하는 약속입니다. 인증받은 리포지터리를 통해 우리의 연구데이터는 국경을 넘어 신뢰받고, FAIR 데이터의 확산에 실질적으로 기여하게 됩니다.</p>
+            <p>이 모든 노력은 결국 <strong>오픈사이언스(Open Science)</strong>라는 큰 흐름으로 모입니다. 지식의 문턱을 낮추는 <strong>오픈액세스(Open Access)</strong>, 데이터를 모두의 자산으로 개방하는 <strong>오픈데이터(Open Data)</strong> 운동은 연구의 투명성과 협력을 높이고, 인류가 함께 직면한 난제를 풀어 가는 든든한 토대가 됩니다. 우리 연구소는 데이터 관리와 표준화, 리포지터리 국제인증, 그리고 과학계량과 메타사이언스 연구를 통해 바로 이 <strong>개방과 공유의 생태계</strong>를 만드는 일에 매진하고 있습니다.</p>
+            <p>연구데이터융복합연구소는 데이터가 지식이 되고, 그 지식이 다시 모두의 것이 되는 <strong>선순환</strong>을 실현하기 위해 끊임없이 연구하고 협력하겠습니다. 여러분의 따뜻한 관심과 성원을 부탁드립니다. 감사합니다.</p>
+            <div class="sign">
+              <div class="s1">전북대학교 부설 연구데이터융복합연구소</div>
+              <div class="s2"><span>소장</span>김선태</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
