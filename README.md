@@ -1,6 +1,6 @@
 # 전북대학교 부설 연구데이터융복합연구소
 
-Research Data Convergence Institute, Jeonbuk National University
+Institute of Research Data Convergence, Jeonbuk National University
 
 연구데이터 관리(RDM·DMP), 메타데이터·국제표준, 리포지토리 국제인증(CoreTrustSeal), 과학계량 및 메타사이언스(Meta Science) 연구를 수행하는 연구소의 공식 소개 홈페이지입니다.
 
